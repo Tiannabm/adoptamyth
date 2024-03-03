@@ -1,0 +1,25 @@
+
+<div class="petDeets"> 
+{{#with foundPet}}
+    <div> 
+        <img class="deetsImg" src="{{imgUrl}}"> <br>
+
+        <h1> {{name}} </h1>
+        
+        <h3> {{description}} </h3>
+    </div>
+<br>
+<br>
+        <a href="/pets/edit/{{id}}"> Edit Pet </a><br>
+        <br>
+        <form class="formBtn" action="/pets/delete/{{id}}" method="POST">
+            <button type="submit" onclick="deletePet(this)">Delete Pet</button>
+        </form>
+
+        <br>
+        <button onclick="history.back()"> Back </button>
+{{/with}}
+</div>
+
+
+<b> <footer>Tianna Broderick</footer> </b>

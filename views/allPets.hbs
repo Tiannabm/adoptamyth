@@ -1,0 +1,33 @@
+<header><h1>Adopt A Myth</h1></header>
+
+<div class="allCards">
+    {{#each petList}}
+    <li> 
+        <ul> 
+        <div class="card">
+            <img src="{{imgUrl}}">
+            <div class="container">
+
+                <h4><b>{{name}}</b></h4>
+
+                <a href="/pets/{{id}}"> View Details </a><br>
+                <a href="/pets/edit/{{id}}"> Edit Pet </a><br>
+                <br>
+                <form class="formBtn" action="/pets/delete/{{id}}" method="POST">
+                    <button type="submit" onclick="deletePet(this)">Delete Pet</button>
+                </form>
+
+                
+            </div>
+            
+        </div>
+        </ul>
+    </li>
+    {{/each}}
+</div>
+
+<br>
+<br>
+<a href="/pets/new"><button>Add A New Pet</button></a>
+
+<b> <footer>Tianna Broderick</footer> </b>
